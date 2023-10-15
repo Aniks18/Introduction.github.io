@@ -1,0 +1,34 @@
+
+    <title>Random Animation</title>
+    <style>
+        #animatedImage {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 3s ease-in-out;
+        }
+    </style>
+</head>
+<body style="background-color: #050504;">
+
+<script>
+    const images = [
+        'saitama.png',
+        'aizen.gif',
+        'hamu.png',
+        
+    ];
+    function getRandomIndex() {
+        return Math.floor(Math.random() * images.length);
+    }
+    function changeImage() {
+        const randomIndex = getRandomIndex();
+        const imageUrl = images[randomIndex];
+        document.getElementById('animatedImage').src = imageUrl;
+    }
+    setInterval(changeImage, 3000);
+</script>
+<img id="animatedImage" src="gifu.gif">
+
+</body>
+</html>
